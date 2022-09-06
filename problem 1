@@ -1,0 +1,37 @@
+/******************************************************************************
+
+If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
+
+Find the sum of all the multiples of 3 or 5 below 1000.
+
+
+                            Online C# Compiler.
+                Code, Compile, Run and Debug C# program online.
+Write your code in this editor and press "Run" button to execute it.
+
+*******************************************************************************/
+
+using System;
+class HelloWorld {
+    
+  static void Main() {
+    Console.WriteLine("Hello World");
+    int sum = 0;
+    int maxNumber = 1000;
+    for(int i = 1; i < maxNumber; i++){
+        if(isMultipleOf3or5(i)){
+            sum += i;
+            Console.WriteLine(i +" is multiple of 3 or 5, sum is now: " + sum);
+        }
+        
+    }
+  }
+  
+  
+  static bool isMultipleOf3or5(int number){
+      if(number % 3 == 0  || number % 5  == 0)
+        return true;
+      return false;
+      
+  }
+}
